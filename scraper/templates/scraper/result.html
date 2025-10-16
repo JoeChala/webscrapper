@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+</head>
+<body>
+  {% if success %}
+    <h3>Cause list fetched successfully!</h3>
+    <a href="{{ pdf_path }}" download>Download PDF</a>
+  {% else %}
+    <h3>Error: {{ error }}</h3>
+    <a href="{% url 'home' %}">Try Again</a>
+  {% endif %}
+</body>
+</html>
+
